@@ -1,4 +1,4 @@
-#include "mbed.h"
+/*#include "mbed.h"
 #include "TextLCD.h"
 
 TextLCD lcd(D2, D3, D4, D5, D6, D7); // RS, E, DB4-DB7
@@ -11,8 +11,8 @@ int main()
             lcd.printf("%u", x);
       }
 }
+*/
 
-/*
 #include "mbed.h"
 #include "TextLCD.h"
 
@@ -32,7 +32,7 @@ int main()
             x++;
       }
 }
-*/
+
 /*//Display ADC input data
 #include "mbed.h"
 #include "TextLCD.h"
