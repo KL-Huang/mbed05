@@ -62,7 +62,7 @@ void uLCD_4DGL ::writeBYTE(char c) // send a BYTE command to screen
     char recv[1];
     _cmd.write(recv, sizeof(recv));
     c = recv[0];
-    ThisThread::sleep_for(500ms); //mbed is too fast for LCD at high baud rates in some long commands
+    ThisThread::sleep_for(1ms); //mbed is too fast for LCD at high baud rates in some long commands
 
 #if DEBUGMODE
     pc.printf("   Char sent : 0x%02X\n", c);
