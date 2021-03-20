@@ -1,3 +1,23 @@
+#include "mbed.h"
+#include "TextLCD.h"
+
+DigitalOut led(LED1);      //LED1 = PA_5
+TextLCD lcd(D2, D3, D4, D5, D6, D7);
+
+int main()
+{
+      int x = 30;
+      lcd.printf("107061249\n");
+      while(x >= 0)
+      {
+            led = !led;             // toggle led
+            lcd.locate(5,1);
+            lcd.printf("%5i",x);    //counter display
+            ThisThread::sleep_for(1s);
+            x--;
+      }
+}
+
 /*#include "mbed.h"
 #include "TextLCD.h"
 
@@ -13,6 +33,7 @@ int main()
 }
 */
 
+/*
 #include "mbed.h"
 #include "TextLCD.h"
 
@@ -32,7 +53,7 @@ int main()
             x++;
       }
 }
-
+*/
 /*//Display ADC input data
 #include "mbed.h"
 #include "TextLCD.h"
